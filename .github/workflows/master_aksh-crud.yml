@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'AKSH-CRUD'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_341E1DDA1656497A957948DCB90D3B03 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2BDBEF10FD894BBDA4BBD91349CE4F43 }}
           package: .
