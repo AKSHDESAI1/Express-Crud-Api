@@ -15,6 +15,41 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/v1", web);
 
+app.get("/", (req, res) => {
+    return res.json([
+        {
+            task: 'get all data',
+            method: "GET",
+            endpoint: "/api/v1"
+        },
+        {
+            task: 'get single data by id',
+            method: "GET",
+            endpoint: "/api/v1/:id",
+            argument: "id in req.params"
+        },
+        {
+            task: 'insert data',
+            method: "POST",
+            endpoint: "/api/v1/",
+            argument: "title and description in req.body"
+        },
+        {
+            task: 'update data',
+            method: "POST",
+            endpoint: "/api/v1/update/:id",
+            argument: "(id in req.params) && (title and description in req.body)"
+        },
+        {
+            task: 'delete data',
+            method: "POST",
+            endpoint: "/api/v1/delete/:id",
+            argument: "(id in req.params) && (title and description in req.body)"
+        },
+
+    ])
+})
+
 app.listen(PORT, () => {
     console.log(`Server is running at ${PORT}. `);
 })
