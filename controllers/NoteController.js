@@ -3,7 +3,7 @@ const Notes = require("../model/NoteModel");
 const getAllDoc = async (req, res) => {
     try {
         const data = await Notes.find();
-        console.log("data", data);
+        console.log("data123", data);
         return res.json(data);
     } catch (error) {
         return res.json({ "error": error.message })
